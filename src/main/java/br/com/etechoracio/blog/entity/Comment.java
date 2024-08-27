@@ -9,21 +9,22 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name = "TBL_POST")
+@Table(name = "TBL_COMENTARIO")
 
-public class Post {
+public class Comment {
 
     @Id
-    @Column(name = "ID_POST")
+    @Column(name = "ID_COMENTARIO")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(name = "TX_TITULO")
-    private String titulo;
+    private Long idComment;
 
     @Column(name = "TX_CONTEUDO")
     private String conteudo;
 
+    @Column(name = "TX_AUTOR")
+    private String autor;
+
     @Column(name = "DT_CRIACAO")
     private LocalDateTime dataCriacao;
+
 }
